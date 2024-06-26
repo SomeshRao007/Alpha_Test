@@ -2,6 +2,7 @@ version: '3'
 
 services:
   strapi:
+      image: 469563970583.dkr.ecr.ap-south-1.amazonaws.com/somesh007:latest
     build: .
     ports:
       - '1337:1337'
