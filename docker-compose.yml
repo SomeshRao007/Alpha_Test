@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  strapi:
+    build: .
+    ports:
+      - '1337:1337'
+    environment:
+      DATABASE_CLIENT: sqlite
+      DATABASE_FILENAME: ./data/data.db
+    volumes:
+      - .:/usr/src/app
+      - ./data:/usr/src/app/data
+
