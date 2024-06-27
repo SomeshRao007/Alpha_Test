@@ -31,5 +31,6 @@ jobs:
             git fetch origin && 
             git reset --hard origin/main && 
             docker run -d -p 1337:1337 someshrao007/strapi:latest
+            '
 
             
