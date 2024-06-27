@@ -1,4 +1,9 @@
-# 🚀 Getting started with Strapi
+# Deploy Strapi App Docker Image Into EC2 Via Terraform
+
+## FlowDiagram
+
+![Uploading TerraStrapi.png…]()
+
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
 
