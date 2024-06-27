@@ -2,7 +2,8 @@
 
 ## FlowDiagram
 
-![Uploading TerraStrapi.png…]()
+![TerraStrapi](https://github.com/SomeshRao007/Terra_Strapi/assets/111784343/dde6b9d5-e19b-4c48-84e8-aab39ecc968b)
+
 
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
