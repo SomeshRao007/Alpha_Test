@@ -5,9 +5,10 @@ on:
     branches: [ main ]  
 
 jobs:
-  build-and-push:
+  
+  Build-and-Push-to-Docker:
     runs-on: ubuntu-latest
-    
+    environment: Somesh_DEV
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
