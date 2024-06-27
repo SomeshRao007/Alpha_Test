@@ -36,8 +36,8 @@ jobs:
                 docker run -d --name alpha_strapi -p 1337:1337 someshrao007/strapi:latest
             else
                 echo "Stopping and removing existing container"
-                docker stop alpha_strapi
-                docker rm alpha_strapi
+                docker stop $(docker ps -q)
+                docker rm -f $(docker ps -a -q)
                 echo "Starting new container"
                 docker run -d --name alpha_strapi -p 1337:1337 someshrao007/strapi:latest
             fi
