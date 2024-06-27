@@ -1,0 +1,35 @@
+name: docker compose up 
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    environment: Somesh_DEV
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Prepare SSH Key
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: |
+          echo "$SSH_PRIVATE_KEY" > key.pem
+          chmod 600 key.pem
+
+      - name: Restart server
+        env:
+          HOST: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+
+      
+        run: |
+          ssh -i key.pem -o StrictHostKeyChecking=no ${USERNAME}@${HOST} '
+            cd Alpha_Test
+            git fetch origin && 
+            git reset --hard origin/main && 
+            docker run -d -p 1337:1337 someshrao007/strapi:latest
+
+            
