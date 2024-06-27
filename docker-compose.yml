@@ -2,7 +2,7 @@ version: '3'
 
 services:
   strapi:
-    image: 469563970583.dkr.ecr.ap-south-1.amazonaws.com/somesh007:latest
+    image: someshrao007/strapi:latest
     #alpha_test_strapi:latest
     build: .
     container_name: alpha_test_strapi
