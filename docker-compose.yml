@@ -2,7 +2,8 @@ version: '3'
 
 services:
   strapi:
-    alpha_test_strapi:latest
+    image: 469563970583.dkr.ecr.ap-south-1.amazonaws.com/somesh007:latest
+    #alpha_test_strapi:latest
     build: .
     ports:
       - '1337:1337'
