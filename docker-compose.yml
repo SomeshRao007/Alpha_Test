@@ -2,6 +2,7 @@ version: '3'
 
 services:
   strapi:
+    alpha_test_strapi:latest
     build: .
     ports:
       - '1337:1337'
