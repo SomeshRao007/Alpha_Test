@@ -26,8 +26,8 @@ resource "aws_instance" "ec2-node-server" {
       "sudo apt-get install git -y",
       "sudo apt-get install -y awscli",
 
-      "git clone --single-branch --branch main https://github.com/SomeshRao007/Alpha_Test.git",
-      "cd Alpha_Test/",
+      "git clone --single-branch --branch main https://github.com/SomeshRao007/Terra_Strapi.git",
+      "cd Terra_Strapi/",
       "git pull origin main",
 
       "sudo apt-get update -y",
