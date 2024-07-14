@@ -1,6 +1,6 @@
 resource "aws_instance" "ec2-node-server" {
   ami                    = "ami-05e00961530ae1b55" #from https://bitnami.com/stack/nodejs/cloud/aws/amis
-  instance_type          = "t3a.small"
+  instance_type          = "t3a.micro"
   vpc_security_group_ids = [aws_security_group.HelloSG.id]
   subnet_id              = aws_subnet.subnet1.id
   key_name               = "NestJs_server"
